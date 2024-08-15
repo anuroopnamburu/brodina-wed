@@ -917,11 +917,19 @@ form label {
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: .1em;
 }
-@media screen and (max-width: 768px) {
-  #fh5co-counter .feature-center {
-    margin-bottom: 50px;
+
+@media only screen and (max-width: 768px) {
+  .container {
+      padding: 10px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .container {
+      padding: 5px;
+  }
+}
+
 #fh5co-counter .icon {
   width: 70px;
   height: 70px;
@@ -1802,6 +1810,9 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
+
+
 
 /*# sourceMappingURL=style.css.map */
 
