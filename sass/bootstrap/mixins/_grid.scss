@@ -12,11 +12,32 @@
 }
 
 // Creates a wrapper for a series of columns
-@mixin make-row($gutter: $grid-gutter-width) {
+/*@mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ceil(($gutter / -2));
   margin-right: floor(($gutter / -2));
   @include clearfix;
+}*/
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  // Specify the margin values directly for the mobile version
+  @media screen and (max-width: 768px) {
+    margin-left: -22px;
+    margin-right: -15px;
+  }
+  
+  // For larger screens, use the default values or values based on the $gutter parameter
+  margin-left: ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  
+  @include clearfix;
 }
+
+
+/*@mixin make-row {
+  margin-left: -22px;
+  margin-right: -15px;
+  @include clearfix;
+}*/
 
 // Generate the extra small columns
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
